@@ -17,8 +17,14 @@ jobs:
         with:
           node-version: '20.x'
 
+
       - name: Install dependencies
         run: npm install
+
+      - name: Install dependencies for rammerhead
+        run: |
+          cd lib/rammerhead
+          npm install
 
       - name: Build site
         run: npm run build
